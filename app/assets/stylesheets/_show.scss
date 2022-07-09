@@ -1,0 +1,21 @@
+$primary-color: rgb(27, 28, 34);
+$secondary-color: rgb(237, 234, 223);
+$highlight-color: rgb(86, 130, 188);
+
+.edit-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: $secondary-color;
+  background-color: $primary-color;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.edit-btn:hover {
+  background-color: $highlight-color;
+}

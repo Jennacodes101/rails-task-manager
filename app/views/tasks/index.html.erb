@@ -1,0 +1,26 @@
+<div class="header">
+  <h1>My tasks</h1>
+</div>
+
+<div class="main">
+  <ul class="tasks-list">
+    <% @tasks.each do |task| %>
+    <li>
+      <% if task.completed %>
+        ✅
+      <% else %>
+        🟩
+      <% end %>
+      <%= link_to task.title, show_path(task.id) %>
+      .
+      <%= link_to destroy_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+            🗑
+          <% end %>
+    </li>
+    <% end %>
+  </ul>
+  <hr>
+
+<%= link_to " + create task", new_path %>
+
+</div>

@@ -1,0 +1,28 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@use 'show';
+
+$font-stack: sans-serif;
+$primary-color: rgb(27, 28, 34);
+$secondary-color: rgb(237, 234, 223);
+$highlight-color: rgb(86, 130, 188);
+
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+  h1 {
+    font-size: 40px;
+    margin-bottom: 5px;}
+}
+
+.tasks-list {
+  list-style: none;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:hover { color: $highlight-color }
+  li { padding-bottom: 5px;}
+}
